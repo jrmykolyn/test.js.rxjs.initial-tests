@@ -1,3 +1,7 @@
+/* -------------------------------------------------- */
+/* `.from()` TESTS */
+/* -------------------------------------------------- */
+// DELCARE 'streams'
 var numberStream = Rx.Observable.from( [ 1, 2, 3, 4, 5, 6, 7, 8, 9 ] );
 
 var doubleNumberStream = numberStream
@@ -6,6 +10,7 @@ var doubleNumberStream = numberStream
 var evenNumberStream = numberStream
     .filter( function( num ) { return num % 2 === 0 } );
 
+// DECLARE 'subscriptions'
 var numberSubscription = numberStream.subscribe(
     logData,
     logError,
